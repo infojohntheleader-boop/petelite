@@ -8,8 +8,8 @@ export function Hero() {
     <section className="relative w-full min-h-[85vh] lg:min-h-[92vh] flex items-center overflow-hidden bg-warm-bg">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&h=900&fit=crop&q=80"
-          alt="Happy golden retriever in a bright home environment"
+          src="/hero-banner.png"
+          alt="Happy pets with Petelite products"
           className="w-full h-full object-cover"
           loading="eager"
         />
