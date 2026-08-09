@@ -113,12 +113,17 @@ html {
   overflow-x: hidden;
 }
 
+/* Prevent elastic/bounce overscroll on touch devices only */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior-y: none;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* Hide scrollbar for category scroll on mobile */
