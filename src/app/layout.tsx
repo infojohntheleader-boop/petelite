@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "Petelite",
   ],
   authors: [{ name: "Petelite" }],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "Petelite | Better Essentials for Happier Pets",
     description:
