@@ -41,7 +41,7 @@ const item = {
 
 export function TrustBar() {
   return (
-    <section className="border-y border-warm-border bg-white">
+    <section className="border-y border-warm-border bg-brand-light/40">
       <motion.div
         variants={container}
         initial="hidden"
@@ -56,11 +56,13 @@ export function TrustBar() {
               variants={item}
               className="flex flex-col items-center text-center gap-2"
             >
-              <b.icon className="w-6 h-6 text-brand" strokeWidth={1.5} />
-              <h3 className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-charcoal">
+              <div className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center">
+                <b.icon className="w-5 h-5 text-brand" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-black">
                 {b.title}
               </h3>
-              <p className="text-xs sm:text-sm text-warm-gray">{b.subtitle}</p>
+              <p className="text-xs sm:text-sm text-black/50">{b.subtitle}</p>
             </motion.div>
           ))}
         </div>

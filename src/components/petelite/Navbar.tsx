@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Search, User, ShoppingBag, Menu, X } from 'lucide-react';
+import { Search, User, ShoppingBag, Menu, X, PawPrint } from 'lucide-react';
 import { useCartStore } from '@/lib/store';
 
 const navLinks = [
@@ -47,7 +47,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-[72px]">
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden p-2 -ml-2 text-charcoal hover:underline transition-colors"
+              className="lg:hidden p-2 -ml-2 text-black hover:text-brand transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
@@ -55,8 +55,9 @@ export function Navbar() {
             </button>
 
             {/* Logo */}
-            <a href="#" className="flex-shrink-0">
-              <span className="text-xl lg:text-2xl font-bold tracking-[0.15em] uppercase text-charcoal">
+            <a href="#" className="flex-shrink-0 flex items-center gap-2">
+              <PawPrint className="w-6 h-6 text-brand" strokeWidth={2} />
+              <span className="text-xl lg:text-2xl font-bold tracking-[0.12em] uppercase text-black">
                 PETELITE
               </span>
             </a>
@@ -67,7 +68,7 @@ export function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-[13px] font-medium tracking-wide uppercase text-warm-gray hover:text-charcoal transition-colors duration-200"
+                  className="text-[13px] font-medium tracking-wide uppercase text-black/70 hover:text-brand transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -77,26 +78,26 @@ export function Navbar() {
             {/* Right icons */}
             <div className="flex items-center gap-1 sm:gap-2">
               <button
-                className="p-2 text-charcoal hover:underline transition-colors"
+                className="p-2 text-black hover:text-brand transition-colors"
                 aria-label="Search"
                 onClick={() => setSearchOpen(!searchOpen)}
               >
                 <Search className="w-[20px] h-[20px]" />
               </button>
               <button
-                className="hidden sm:flex p-2 text-charcoal hover:underline transition-colors"
+                className="hidden sm:flex p-2 text-black hover:text-brand transition-colors"
                 aria-label="Account"
               >
                 <User className="w-[20px] h-[20px]" />
               </button>
               <button
-                className="p-2 text-charcoal hover:underline transition-colors relative"
+                className="p-2 text-black hover:text-brand transition-colors relative"
                 aria-label={`Cart with ${itemCount} items`}
                 onClick={openCart}
               >
                 <ShoppingBag className="w-[20px] h-[20px]" />
                 {itemCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-charcoal text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-brand text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {itemCount}
                   </span>
                 )}
@@ -108,11 +109,11 @@ export function Navbar() {
           {searchOpen && (
             <div className="pb-4 animate-fade-in">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-warm-gray" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-black/40" />
                 <input
                   type="search"
                   placeholder="Search products..."
-                  className="w-full pl-10 pr-4 py-2.5 bg-warm-bg border border-warm-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-warm-bg border border-warm-border rounded-lg text-sm text-black placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
                   autoFocus
                 />
               </div>
@@ -130,10 +131,13 @@ export function Navbar() {
           />
           <div className="absolute inset-y-0 left-0 w-full max-w-xs bg-white shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between p-4 border-b border-warm-border">
-              <span className="text-lg font-bold tracking-[0.15em] uppercase">PETELITE</span>
+              <div className="flex items-center gap-2">
+                <PawPrint className="w-5 h-5 text-brand" strokeWidth={2} />
+                <span className="text-lg font-bold tracking-[0.12em] uppercase text-black">PETELITE</span>
+              </div>
               <button
                 onClick={() => setMobileOpen(false)}
-                className="p-2 -mr-2 text-charcoal hover:opacity-70"
+                className="p-2 -mr-2 text-black hover:text-brand transition-colors"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
@@ -145,7 +149,7 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-6 py-3 text-base font-medium tracking-wide uppercase text-charcoal hover:opacity-70 hover:bg-secondary transition-colors"
+                  className="block px-6 py-3 text-base font-medium tracking-wide uppercase text-black hover:text-brand hover:bg-brand-light/50 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -154,7 +158,7 @@ export function Navbar() {
             <div className="px-6 py-4 border-t border-warm-border">
               <a
                 href="#"
-                className="flex items-center gap-3 py-2 text-sm text-warm-gray hover:text-charcoal transition-colors"
+                className="flex items-center gap-3 py-2 text-sm text-black hover:text-brand transition-colors"
               >
                 <User className="w-5 h-5" />
                 Account

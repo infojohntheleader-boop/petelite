@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Star, Plus } from 'lucide-react';
+import { Star, Plus, PawPrint } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Product } from '@/lib/data';
 import { formatPrice, calculateSavings } from '@/lib/data';
@@ -22,11 +22,11 @@ export function ProductCard({ product, onProductClick, index = 0 }: ProductCardP
     : 0;
 
   const badgeColor = {
-    'BEST SELLER': 'bg-charcoal text-white',
+    'BEST SELLER': 'bg-brand text-white',
     'SALE': 'bg-red-600 text-white',
-    'POPULAR': 'bg-brand text-white',
-    'NEW': 'bg-emerald-700 text-white',
-  }[product.badge || ''] || 'bg-charcoal text-white';
+    'POPULAR': 'bg-brand-dark text-white',
+    'NEW': 'bg-brand text-white',
+  }[product.badge || ''] || 'bg-brand text-white';
 
   return (
     <motion.div
@@ -77,7 +77,7 @@ export function ProductCard({ product, onProductClick, index = 0 }: ProductCardP
               e.stopPropagation();
               addItem(product);
             }}
-            className="w-full bg-charcoal/95 backdrop-blur-sm text-white text-xs font-semibold tracking-wider uppercase py-3 rounded-lg hover:bg-charcoal transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-brand/95 backdrop-blur-sm text-white text-xs font-semibold tracking-wider uppercase py-3 rounded-lg hover:bg-brand-dark transition-colors flex items-center justify-center gap-2"
             aria-label={`Quick add ${product.name} to cart`}
           >
             <Plus className="w-4 h-4" />
@@ -89,7 +89,7 @@ export function ProductCard({ product, onProductClick, index = 0 }: ProductCardP
       {/* Info */}
       <div className="p-4">
         <h3
-          className="text-sm font-medium text-charcoal leading-snug line-clamp-2 cursor-pointer hover:underline transition-colors"
+          className="text-sm font-medium text-black leading-snug line-clamp-2 cursor-pointer hover:text-brand transition-colors"
           onClick={() => onProductClick?.(product.slug)}
         >
           {product.name}
@@ -109,19 +109,19 @@ export function ProductCard({ product, onProductClick, index = 0 }: ProductCardP
               />
             ))}
           </div>
-          <span className="text-xs text-warm-gray">
+          <span className="text-xs text-black/40">
             {product.reviewCount > 0 ? `(${product.reviewCount})` : ''}
           </span>
         </div>
 
         {/* Price */}
         <div className="flex items-center gap-2 mt-2.5">
-          <span className="text-base font-semibold text-charcoal">
+          <span className="text-base font-semibold text-black">
             ${formatPrice(product.price)}
           </span>
           {product.originalPrice && (
             <>
-              <span className="text-sm text-warm-gray line-through">
+              <span className="text-sm text-black/40 line-through">
                 ${formatPrice(product.originalPrice)}
               </span>
               <span className="text-xs font-semibold text-red-600">

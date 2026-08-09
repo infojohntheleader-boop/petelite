@@ -38,22 +38,21 @@ const bottomLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#F0EDE6]">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand / Logo Section — spans 2 cols */}
           <div className="col-span-2">
             <a href="#" className="inline-block">
-              <span className="font-serif text-2xl tracking-wide text-black">
+              <span className="font-serif text-2xl tracking-wide text-white">
                 Petelite
               </span>
             </a>
-            <p className="mt-4 text-sm leading-relaxed text-black max-w-xs">
+            <p className="mt-4 text-sm leading-relaxed text-white/50 max-w-xs">
               Premium pet essentials crafted with care.
               Designed for comfort, built for joy — because
               your pet deserves the very best.
             </p>
-            {/* Social icons row under brand text */}
             <div className="mt-6 flex items-center gap-4">
               {socialLinks.map((link) => (
                 <a
@@ -61,7 +60,7 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-medium tracking-wide uppercase text-black hover:text-brand transition-colors"
+                  className="text-xs font-medium tracking-wide uppercase text-white/50 hover:text-brand-light transition-colors"
                 >
                   {link.label}
                 </a>
@@ -71,7 +70,7 @@ export function Footer() {
 
           {/* Shop */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-black mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               SHOP
             </h3>
             <ul className="space-y-2.5">
@@ -79,7 +78,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-black hover:text-brand transition-colors"
+                    className="text-sm text-white/50 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -90,7 +89,7 @@ export function Footer() {
 
           {/* Help */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-black mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               HELP
             </h3>
             <ul className="space-y-2.5">
@@ -98,7 +97,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-black hover:text-brand transition-colors"
+                    className="text-sm text-white/50 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -109,7 +108,7 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-black mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               ABOUT
             </h3>
             <ul className="space-y-2.5">
@@ -117,7 +116,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-black hover:text-brand transition-colors"
+                    className="text-sm text-white/50 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -128,7 +127,7 @@ export function Footer() {
 
           {/* Follow */}
           <div className="hidden md:block">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-black mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               FOLLOW
             </h3>
             <ul className="space-y-2.5">
@@ -138,7 +137,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-black hover:text-brand transition-colors"
+                    className="text-sm text-white/50 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -149,8 +148,8 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-black">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-white/40">
             © {new Date().getFullYear()} Petelite
           </p>
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
@@ -158,7 +157,7 @@ export function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs text-black hover:text-brand transition-colors"
+                className="text-xs text-white/40 hover:text-white/70 transition-colors"
               >
                 {link.label}
               </a>

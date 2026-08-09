@@ -11,7 +11,7 @@ export function FeaturedProduct({ onProductClick }: { onProductClick: (slug: str
   const savings = product.originalPrice ? calculateSavings(product.price, product.originalPrice) : 0;
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-warm-bg">
+    <section className="py-16 sm:py-20 lg:py-24 bg-brand-light/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Image */}
@@ -42,13 +42,14 @@ export function FeaturedProduct({ onProductClick }: { onProductClick: (slug: str
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-charcoal leading-tight">
+            <span className="text-xs font-semibold tracking-widest uppercase text-brand">Featured Product</span>
+            <h2 className="mt-2 font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-black leading-tight">
               Keep Their Water Fresh
             </h2>
-            <p className="mt-2 text-black font-semibold tracking-wide uppercase text-sm">
+            <p className="mt-2 text-black/60 font-semibold tracking-wide uppercase text-sm">
               Make Hydration Part of Their Everyday Routine
             </p>
-            <p className="mt-5 text-warm-gray leading-relaxed">
+            <p className="mt-5 text-black/60 leading-relaxed">
               {product.shortDescription}
             </p>
 
@@ -56,8 +57,10 @@ export function FeaturedProduct({ onProductClick }: { onProductClick: (slug: str
             <ul className="mt-6 space-y-3">
               {product.benefits.slice(0, 4).map((b) => (
                 <li key={b} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" strokeWidth={2.5} />
-                  <span className="text-sm sm:text-base text-charcoal">{b}</span>
+                  <div className="w-5 h-5 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-brand" strokeWidth={3} />
+                  </div>
+                  <span className="text-sm sm:text-base text-black">{b}</span>
                 </li>
               ))}
             </ul>
@@ -65,9 +68,9 @@ export function FeaturedProduct({ onProductClick }: { onProductClick: (slug: str
             {/* Price & CTA */}
             <div className="mt-8">
               <div className="flex items-baseline gap-3">
-                <span className="text-3xl font-bold text-charcoal">${formatPrice(product.price)}</span>
+                <span className="text-3xl font-bold text-black">${formatPrice(product.price)}</span>
                 {product.originalPrice && (
-                  <span className="text-lg text-warm-gray line-through">
+                  <span className="text-lg text-black/40 line-through">
                     ${formatPrice(product.originalPrice)}
                   </span>
                 )}
@@ -83,7 +86,8 @@ export function FeaturedProduct({ onProductClick }: { onProductClick: (slug: str
                 </button>
               </div>
 
-              <p className="mt-4 text-xs text-warm-gray">
+              <p className="mt-4 text-xs text-black/40 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand" />
                 Free shipping on orders $50+
               </p>
             </div>

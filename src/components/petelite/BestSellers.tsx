@@ -9,7 +9,7 @@ export function BestSellers({ onProductClick }: { onProductClick: (slug: string)
   const products = getBestSellers();
 
   return (
-    <section id="best-sellers" className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section id="best-sellers" className="py-16 sm:py-20 lg:py-24 bg-warm-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -20,16 +20,17 @@ export function BestSellers({ onProductClick }: { onProductClick: (slug: string)
           className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 sm:mb-12"
         >
           <div>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+            <span className="text-xs font-semibold tracking-widest uppercase text-brand">Most Loved</span>
+            <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-black">
               Pet Parents&rsquo; Favorites
             </h2>
-            <p className="mt-2 text-warm-gray text-base sm:text-lg">
+            <p className="mt-2 text-black/50 text-base sm:text-lg">
               Discover some of the products our customers love most.
             </p>
           </div>
           <a
             href="#"
-            className="flex items-center gap-2 text-sm font-semibold tracking-wide uppercase text-charcoal hover:underline transition-colors group"
+            className="flex items-center gap-2 text-sm font-semibold tracking-wide uppercase text-brand hover:text-brand-dark transition-colors group"
           >
             VIEW ALL PRODUCTS
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

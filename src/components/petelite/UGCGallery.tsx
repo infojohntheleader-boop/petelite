@@ -6,7 +6,7 @@ import { ugImages } from '@/lib/data';
 
 export function UGCGallery() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-warm-bg">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -16,10 +16,11 @@ export function UGCGallery() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-12"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+          <span className="text-xs font-semibold tracking-widest uppercase text-brand">Community</span>
+          <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-black">
             Life With Petelite
           </h2>
-          <p className="mt-2 text-warm-gray text-base sm:text-lg">
+          <p className="mt-2 text-black/50 text-base sm:text-lg">
             Real pets. Real moments. Real Petelite.
           </p>
         </motion.div>
@@ -44,7 +45,7 @@ export function UGCGallery() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-brand/0 group-hover:bg-brand/20 transition-colors duration-300" />
             </motion.a>
           ))}
         </div>
@@ -57,19 +58,14 @@ export function UGCGallery() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-8 sm:mt-10"
         >
-          <div className="inline-flex items-center gap-2">
-            <Instagram className="w-5 h-5 text-charcoal" />
-            <span className="text-sm font-semibold tracking-wider uppercase text-charcoal">
-              @PETELITE
-            </span>
-          </div>
           <a
             href="https://instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 text-sm font-semibold tracking-wide uppercase text-charcoal hover:underline transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase text-brand hover:text-brand-dark transition-colors"
           >
-            FOLLOW US →
+            <Instagram className="w-5 h-5" />
+            FOLLOW @PETELITE
           </a>
         </motion.div>
       </div>

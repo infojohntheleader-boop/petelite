@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { PawPrint } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -17,21 +18,31 @@ export function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-0">
         <div className="max-w-xl lg:max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light border border-brand/15 mb-6"
+          >
+            <PawPrint className="w-4 h-4 text-brand" strokeWidth={2.5} />
+            <span className="text-xs font-semibold tracking-wider uppercase text-brand-dark">Premium Pet Essentials</span>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-bold text-charcoal leading-[1.08] tracking-tight"
+            className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-bold text-black leading-[1.08] tracking-tight"
           >
             Better Essentials for{' '}
-            <span className="text-black">Happier Pets</span>
+            <span className="text-brand">Happier Pets</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
-            className="mt-5 sm:mt-6 text-base sm:text-lg text-warm-gray leading-relaxed max-w-lg"
+            className="mt-5 sm:mt-6 text-base sm:text-lg text-black/60 leading-relaxed max-w-lg"
           >
             Thoughtfully selected pet products designed to make everyday life more comfortable, convenient, and fun for you and your furry companion.
           </motion.p>
@@ -54,7 +65,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs sm:text-sm text-warm-gray"
+            className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs sm:text-sm text-black/60"
           >
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
