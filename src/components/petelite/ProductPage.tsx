@@ -189,7 +189,7 @@ export function ProductPage({
 
                   <button
                     onClick={() => addItem(product, quantity)}
-                    className="w-full py-3.5 text-sm font-semibold tracking-wide uppercase border border-charcoal text-charcoal rounded-lg hover:bg-charcoal hover:text-white transition-all duration-300"
+                    className="w-full py-3.5 text-sm font-semibold tracking-wide uppercase bg-brand text-white rounded-lg hover:bg-brand-dark transition-all duration-300 hover:-translate-y-px"
                   >
                     BUY IT NOW
                   </button>

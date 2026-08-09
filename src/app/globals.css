@@ -140,15 +140,17 @@ body {
 
 .btn-outline-premium {
   @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wide uppercase transition-all duration-300 ease-out;
-  background: transparent;
-  color: #1C1917;
-  border: 1.5px solid #1C1917;
+  background: #8B7355;
+  color: #FFFFFF;
+  border: 1.5px solid #8B7355;
   border-radius: 0.375rem;
 }
 .btn-outline-premium:hover {
-  background: #1C1917;
-  color: #FAFAF7;
+  background: #6B5B45;
+  border-color: #6B5B45;
+  color: #FFFFFF;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.25);
 }
 
 /* Product card hover */
