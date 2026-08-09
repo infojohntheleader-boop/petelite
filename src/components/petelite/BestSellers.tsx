@@ -29,7 +29,7 @@ export function BestSellers({ onProductClick }: { onProductClick: (slug: string)
           </div>
           <a
             href="#"
-            className="flex items-center gap-2 text-sm font-semibold tracking-wide uppercase text-charcoal hover:text-brand transition-colors group"
+            className="flex items-center gap-2 text-sm font-semibold tracking-wide uppercase text-charcoal hover:underline transition-colors group"
           >
             VIEW ALL PRODUCTS
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

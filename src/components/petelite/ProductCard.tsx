@@ -89,7 +89,7 @@ export function ProductCard({ product, onProductClick, index = 0 }: ProductCardP
       {/* Info */}
       <div className="p-4">
         <h3
-          className="text-sm font-medium text-charcoal leading-snug line-clamp-2 cursor-pointer hover:text-brand transition-colors"
+          className="text-sm font-medium text-charcoal leading-snug line-clamp-2 cursor-pointer hover:underline transition-colors"
           onClick={() => onProductClick?.(product.slug)}
         >
           {product.name}

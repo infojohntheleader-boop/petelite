@@ -76,7 +76,7 @@ export function CartDrawer({ onProductClick }: { onProductClick?: (slug: string)
                   <p className="text-warm-gray text-base">Your cart is empty</p>
                   <button
                     onClick={closeCart}
-                    className="mt-4 text-sm font-semibold text-brand hover:text-brand-dark transition-colors"
+                    className="mt-4 text-sm font-semibold text-black hover:underline transition-colors"
                   >
                     Continue Shopping
                   </button>
@@ -94,7 +94,7 @@ export function CartDrawer({ onProductClick }: { onProductClick?: (slug: string)
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3
-                          className="text-sm font-medium text-charcoal leading-snug line-clamp-2 cursor-pointer hover:text-brand transition-colors"
+                          className="text-sm font-medium text-charcoal leading-snug line-clamp-2 cursor-pointer hover:underline transition-colors"
                           onClick={() => { closeCart(); onProductClick?.(item.product.slug); }}
                         >
                           {item.product.name}
@@ -150,12 +150,12 @@ export function CartDrawer({ onProductClick }: { onProductClick?: (slug: string)
                               <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <p className="text-sm text-charcoal line-clamp-1 group-hover:text-brand transition-colors">
+                              <p className="text-sm text-charcoal line-clamp-1 group-hover:underline transition-colors">
                                 {p.name}
                               </p>
                               <p className="text-sm font-semibold text-charcoal">${formatPrice(p.price)}</p>
                             </div>
-                            <span className="text-xs font-semibold text-brand">+ Add</span>
+                            <span className="text-xs font-semibold text-black">+ Add</span>
                           </div>
                         ))}
                       </div>

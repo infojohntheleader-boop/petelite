@@ -24,7 +24,7 @@ export function Hero() {
             className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-bold text-charcoal leading-[1.08] tracking-tight"
           >
             Better Essentials for{' '}
-            <span className="text-brand">Happier Pets</span>
+            <span className="text-black">Happier Pets</span>
           </motion.h1>
 
           <motion.p

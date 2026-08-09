@@ -47,7 +47,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-[72px]">
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden p-2 -ml-2 text-charcoal hover:text-brand transition-colors"
+              className="lg:hidden p-2 -ml-2 text-charcoal hover:underline transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
@@ -77,20 +77,20 @@ export function Navbar() {
             {/* Right icons */}
             <div className="flex items-center gap-1 sm:gap-2">
               <button
-                className="p-2 text-charcoal hover:text-brand transition-colors"
+                className="p-2 text-charcoal hover:underline transition-colors"
                 aria-label="Search"
                 onClick={() => setSearchOpen(!searchOpen)}
               >
                 <Search className="w-[20px] h-[20px]" />
               </button>
               <button
-                className="hidden sm:flex p-2 text-charcoal hover:text-brand transition-colors"
+                className="hidden sm:flex p-2 text-charcoal hover:underline transition-colors"
                 aria-label="Account"
               >
                 <User className="w-[20px] h-[20px]" />
               </button>
               <button
-                className="p-2 text-charcoal hover:text-brand transition-colors relative"
+                className="p-2 text-charcoal hover:underline transition-colors relative"
                 aria-label={`Cart with ${itemCount} items`}
                 onClick={openCart}
               >
@@ -133,7 +133,7 @@ export function Navbar() {
               <span className="text-lg font-bold tracking-[0.15em] uppercase">PETELITE</span>
               <button
                 onClick={() => setMobileOpen(false)}
-                className="p-2 -mr-2 text-charcoal hover:text-brand"
+                className="p-2 -mr-2 text-charcoal hover:opacity-70"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
@@ -145,7 +145,7 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-6 py-3 text-base font-medium tracking-wide uppercase text-charcoal hover:text-brand hover:bg-secondary transition-colors"
+                  className="block px-6 py-3 text-base font-medium tracking-wide uppercase text-charcoal hover:opacity-70 hover:bg-secondary transition-colors"
                 >
                   {link.label}
                 </a>

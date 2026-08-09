@@ -45,7 +45,7 @@ export function FeaturedProduct({ onProductClick }: { onProductClick: (slug: str
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-charcoal leading-tight">
               Keep Their Water Fresh
             </h2>
-            <p className="mt-2 text-brand font-semibold tracking-wide uppercase text-sm">
+            <p className="mt-2 text-black font-semibold tracking-wide uppercase text-sm">
               Make Hydration Part of Their Everyday Routine
             </p>
             <p className="mt-5 text-warm-gray leading-relaxed">

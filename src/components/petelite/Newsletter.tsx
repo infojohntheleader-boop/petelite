@@ -35,7 +35,7 @@ export function Newsletter() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-8 text-brand font-semibold text-lg"
+              className="mt-8 text-black font-semibold text-lg"
             >
               Welcome to the family! Check your inbox for your offer.
             </motion.p>

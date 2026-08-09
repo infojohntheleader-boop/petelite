@@ -67,7 +67,7 @@ export function UGCGallery() {
             href="https://instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 text-sm font-semibold tracking-wide uppercase text-charcoal hover:text-brand transition-colors"
+            className="inline-block mt-3 text-sm font-semibold tracking-wide uppercase text-charcoal hover:underline transition-colors"
           >
             FOLLOW US →
           </a>
