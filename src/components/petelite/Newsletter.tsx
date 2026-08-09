@@ -16,7 +16,7 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-brand-light/40">
+    <section className="py-10 sm:py-14 lg:py-16 bg-brand-light/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

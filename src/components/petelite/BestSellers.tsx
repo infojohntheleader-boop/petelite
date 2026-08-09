@@ -9,7 +9,7 @@ export function BestSellers({ onProductClick }: { onProductClick: (slug: string)
   const products = getBestSellers();
 
   return (
-    <section id="best-sellers" className="py-16 sm:py-20 lg:py-24 bg-warm-bg">
+    <section id="best-sellers" className="py-10 sm:py-14 lg:py-16 bg-warm-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

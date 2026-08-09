@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function CategoryGrid() {
   return (
-    <section id="categories" className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section id="categories" className="py-10 sm:py-14 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -14,7 +14,7 @@ export function CategoryGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-xl mx-auto mb-10 sm:mb-14"
+          className="text-center max-w-xl mx-auto mb-8 sm:mb-10"
         >
           <span className="text-xs font-semibold tracking-widest uppercase text-brand">Browse by Category</span>
           <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-black">

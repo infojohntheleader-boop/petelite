@@ -47,7 +47,7 @@ export function TrustBar() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-50px' }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6"
       >
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {benefits.map((b) => (

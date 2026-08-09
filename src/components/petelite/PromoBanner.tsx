@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export function PromoBanner() {
   return (
-    <section className="relative py-20 sm:py-24 lg:py-28 overflow-hidden">
+    <section className="relative py-14 sm:py-18 lg:py-20 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img

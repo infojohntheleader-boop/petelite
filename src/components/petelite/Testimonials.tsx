@@ -6,7 +6,7 @@ import { testimonials } from '@/lib/data';
 
 export function Testimonials() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-brand-light/30 relative overflow-hidden">
+    <section className="py-10 sm:py-14 lg:py-16 bg-brand-light/30 relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -14,7 +14,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-xl mx-auto mb-10 sm:mb-14"
+          className="text-center max-w-xl mx-auto mb-8 sm:mb-10"
         >
           <span className="text-xs font-semibold tracking-widest uppercase text-brand">
             Customer Love
