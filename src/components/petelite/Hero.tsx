@@ -5,7 +5,7 @@ import { PawPrint } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[85vh] lg:min-h-[92vh] flex items-center overflow-hidden bg-warm-bg">
+    <section className="relative w-full min-h-[85dvh] lg:min-h-[92dvh] flex items-center overflow-hidden bg-warm-bg">
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-banner.png"

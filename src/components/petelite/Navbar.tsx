@@ -37,7 +37,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full transition-all duration-300 will-change-transform ${
           scrolled
             ? 'bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(0,0,0,0.06)]'
             : 'bg-white'
