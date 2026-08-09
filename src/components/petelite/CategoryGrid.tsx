@@ -35,7 +35,7 @@ export function CategoryGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer"
+              className={`group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer ${i >= 4 ? 'hidden md:block' : ''}`}
             >
               <img
                 src={cat.image}

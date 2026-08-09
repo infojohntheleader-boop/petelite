@@ -35,7 +35,7 @@ export function ShopByNeed() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="group relative rounded-2xl overflow-hidden aspect-square cursor-pointer"
+              className={`group relative rounded-2xl overflow-hidden aspect-square cursor-pointer ${i >= 4 ? 'hidden md:block' : ''}`}
             >
               <img
                 src={item.image}

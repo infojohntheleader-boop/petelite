@@ -40,12 +40,13 @@ export function BestSellers({ onProductClick }: { onProductClick: (slug: string)
         {/* Products */}
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
           {products.map((product, i) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onProductClick={onProductClick}
-              index={i}
-            />
+            <div key={product.id} className={i >= 4 ? 'hidden lg:block' : ''}>
+              <ProductCard
+                product={product}
+                onProductClick={onProductClick}
+                index={i}
+              />
+            </div>
           ))}
         </div>
       </div>
