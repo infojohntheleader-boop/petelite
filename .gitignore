@@ -15,3 +15,4 @@ scripts/petelite-ref.json
 .DS_Store
 upload/
 skills/
+.env
