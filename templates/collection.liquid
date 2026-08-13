@@ -1,0 +1,80 @@
+<div class="collection-header" style="max-width: {{ settings.container_width }}px; margin: 0 auto; padding: var(--section-spacing, 40px) 20px;">
+  <h1>{{ collection.title }}</h1>
+  {% if collection.description %}
+    <div class="collection-description">{{ collection.description }}</div>
+  {% endif %}
+</div>
+
+<div class="collection-container" style="max-width: {{ settings.container_width }}px; margin: 0 auto; padding: 0 20px 40px;">
+  <div class="collection-filters">
+    <!-- Add filters here -->
+  </div>
+  
+  <div class="products-grid">
+    {% if collection.products.size > 0 %}
+      {% for product in collection.products %}
+        <div class="product-card">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.featured_image.alt }}" class="product-image" />
+          {% endif %}
+          <h3>{{ product.title }}</h3>
+          <div class="product-price">{{ product.price | money }}</div>
+          <a href="{{ product.url }}" class="btn btn-primary">View Product</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No products found</p>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .collection-header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .collection-header h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  
+  .product-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .product-card h3 {
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .product-price {
+    padding: 0 16px;
+    font-weight: 700;
+    color: var(--color-accent, #F1A208);
+  }
+  
+  .product-card .btn {
+    margin: 16px;
+    width: calc(100% - 32px);
+  }
+</style>

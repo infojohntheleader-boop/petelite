@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
+  {% include 'head' %}
+  {{ content_for_header }}
+</head>
+<body>
+  {% include 'header' %}
+  
+  <main id="main-content" role="main">
+    {{ content_for_layout }}
+  </main>
+  
+  {% include 'footer' %}
+  
+  <script>
+    document.documentElement.style.setProperty('--section-spacing', '{{ settings.section_spacing }}px');
+    document.documentElement.style.setProperty('--container-width', '{{ settings.container_width }}px');
+    document.documentElement.style.setProperty('--color-primary', '{{ settings.color_primary }}');
+    document.documentElement.style.setProperty('--color-secondary', '{{ settings.color_secondary }}');
+    document.documentElement.style.setProperty('--color-accent', '{{ settings.color_accent }}');
+  </script>
+</body>
+</html>

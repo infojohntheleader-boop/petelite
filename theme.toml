@@ -1,0 +1,12 @@
+name = "Petelite - Premium Pet E-Commerce Theme"
+description = "A premium direct-to-consumer pet e-commerce theme built with TypeScript, TailwindCSS, and modern React components."
+theme_store_id = ""
+
+[theme]
+name = "Petelite"
+theme_store_id = ""
+
+[development]
+password = ""
+store = ""
+theme_id = ""

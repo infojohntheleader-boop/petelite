@@ -1,0 +1,114 @@
+<section class="hero" style="background-color: {{ section.settings.bg_color }};">
+  <div class="hero-content" style="max-width: {{ section.settings.content_width }}px;">
+    <h1 class="hero-title">{{ section.settings.title }}</h1>
+    <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+    {% if section.settings.button_text %}
+      <a href="{{ section.settings.button_link }}" class="btn btn-primary">{{ section.settings.button_text }}</a>
+    {% endif %}
+  </div>
+  {% if section.settings.hero_image %}
+    <img src="{{ section.settings.hero_image | image_url: width: 1200 }}" alt="Hero" class="hero-image" />
+  {% endif %}
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    flex: 1;
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .hero-image {
+    flex: 1;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      padding: 40px 20px;
+      min-height: auto;
+    }
+    
+    .hero-title {
+      font-size: 32px;
+    }
+    
+    .hero-subtitle {
+      font-size: 16px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome to Petelite"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Premium pet products for your furry friends"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Content Width",
+      "default": 1200
+    }
+  ]
+}
+{% endschema %}

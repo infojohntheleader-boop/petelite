@@ -1,0 +1,14 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "color_primary": "#000000",
+      "color_secondary": "#FFFFFF",
+      "color_accent": "#F1A208",
+      "font_heading": "system-ui",
+      "font_body": "system-ui",
+      "section_spacing": 40,
+      "container_width": 1200
+    }
+  }
+}
