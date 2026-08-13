@@ -8,5 +8,5 @@ theme_store_id = ""
 
 [development]
 password = ""
-store = ""
+store = "bgwixn-h1.myshopify.com"
 theme_id = ""
